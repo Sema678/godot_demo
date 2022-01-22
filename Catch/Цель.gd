@@ -11,6 +11,9 @@ var health = MAX_HEALTH
 func _ready():
 	rng.randomize()
 	position.x = rng.randf_range(0, get_viewport().size.x)
+	var bar = get_node("../Цель/HealthBar")
+	bar.max_value = MAX_HEALTH
+	bar.value = bar.max_value
 	
 
 # управление пользователем	
